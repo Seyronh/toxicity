@@ -49,7 +49,7 @@ class Modelo {
         datos = await this.cargar(datos)
         const entrada = tensorflow.tensor2d(datos.inputs)
         const salida = tensorflow.tensor2d(datos.outputs)
-        await this.modelo.fit(entrada, salida, {epochs: datos.inputs.length*100});
+        await this.modelo.fit(entrada, salida, {epochs: datos.inputs.length*100,shuffle:true});
         this.entrenado = true
     }
     async predecir(entrada){
