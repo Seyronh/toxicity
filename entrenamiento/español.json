@@ -22,7 +22,8 @@
     "Nazi",
     "Abajo los homosexuales",
     "Sexual",
-    "Hola buenas que tal?"
+    "Hola buenas que tal?", 
+    "Hola me folle a tu mama", 
   ],
   "outputs": [
     0,
@@ -47,6 +48,7 @@
     1,
     1,
     0,
-    0
+    0, 
+    1,
   ]
 }
