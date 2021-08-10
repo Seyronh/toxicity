@@ -55,6 +55,7 @@ class Modelo {
     async predecir(entrada){
         if(this.entrenado == false) throw new Error("Debe entrenar el modelo primero antes de predecir")
         let encoded = await this.encoder.encode(entrada)
+        let tensor = tensorflow.tensor2d([encoded])
         return this.modelo.predict(encoded).arraySync()[0][0]
     }
     async cargar(datos){
