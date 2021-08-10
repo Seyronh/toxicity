@@ -21,7 +21,8 @@
     "Cállate gay",
     "Nazi",
     "Abajo los homosexuales",
-    "Sexual"
+    "Sexual",
+    "Hola buenas que tal?"
   ],
   "outputs": [
     0,
@@ -45,6 +46,7 @@
     1,
     1,
     1,
+    0,
     0
   ]
 }
