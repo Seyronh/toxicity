@@ -22,6 +22,7 @@ class Modelo {
     constructor(){
         this.modelo = this.crearmodelo()
         this.encoder = new Encoder()
+        this.entrenado = false
     }
     crearmodelo(){
         const modelo = tensorflow.sequential()
@@ -49,10 +50,12 @@ class Modelo {
         const entrada = tensorflow.tensor2d(datos.inputs)
         const salida = tensorflow.tensor2d(datos.outputs)
         await this.modelo.fit(entrada, salida, {epochs: datos.inputs.length*100});
+        this.entrenado = true
     }
     async predecir(entrada){
+        if(this.entrenado == false) throw new Error("Debe entrenar el modelo primero antes de predecir")
         let encoded = await this.encoder.encode(entrada)
-        return this.modelo.predict(encoded).arraySync()[0]
+        return this.modelo.predict(encoded).arraySync()[0][0]
     }
     async cargar(datos){
         let inputs = datos.inputs

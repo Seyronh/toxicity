@@ -5,6 +5,32 @@
 ## Importante
 El tiempo que tarde en cargar los datos y aprenderlos dependera de la potencia de la maquina.
 
+## Instrucciones
+Primero debera instalar el npm usando
+```bash
+npm install toxicity --save
+```
+Luego tendra que declarar el modelo y crearlo
+```js
+const modelo = require('toxicity')
+const detector = new modelo()
+```
+Luego de esto debera cargar el lenguaje del cual aprendera insultos o toxicidad en general
+> Los lenguajes disponibles son los .json de la carpeta entrenamiento
+```js
+const modelo = require('toxicity')
+const detector = new modelo()
+detector.entrenar('español')
+```
+Y por ultimo ya podria predecir
+```js
+const modelo = require('toxicity')
+const detector = new modelo()
+detector.entrenar('español').then(async () => { //El .then es porque entrenar es un metodo async y el then hara que se ejecute al terminar de entrenar
+    let resultado = await detector.predecir("Tus muertos") //Devolvera un numero entre 0 y 1 por lo que contra mas cerca del 1 mas probabilidad de que sea toxico
+    console.log(resultado)
+})
+```
 ## Contribuyendo
 Para añadir palabras al entrenamiento y ayudar a que Toxicity sea mejor aún, puedes hacer una Pull Request en
 el repositorio de [GitHub](https://github.com/Seyronh/toxicity) modificando el archivo JSON dentro de la carpeta **entrenamiento**.

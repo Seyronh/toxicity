@@ -1,6 +1,6 @@
 {
   "name": "toxicity",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "npm",
   "main": "index.js",
   "scripts": {
