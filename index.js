@@ -70,4 +70,4 @@ class Modelo {
     }
 }
 
-return Modelo
+module.exports=Modelo
