@@ -2,6 +2,9 @@
 > Un módulo que permite detectar palabras con toxicidad o insultos (en Español).
 > Completamente usable para bots de Discord u otros.
 
+## Importante
+El tiempo que tarde en cargar los datos y aprenderlos dependera de la potencia de la maquina.
+
 ## Contribuyendo
 Para añadir palabras al entrenamiento y ayudar a que Toxicity sea mejor aún, puedes hacer una Pull Request en
 el repositorio de [GitHub](https://github.com/Seyronh/toxicity) modificando el archivo JSON dentro de la carpeta **entrenamiento**.
