@@ -32,10 +32,12 @@ detector.entrenar('español').then(async () => { //El .then es porque entrenar e
 })
 ```
 ## Contribuyendo
-Para añadir palabras al entrenamiento y ayudar a que Toxicity sea mejor aún, puedes hacer una Pull Request en
+Para añadir palabras/frases al entrenamiento y ayudar a que Toxicity sea mejor aún, puedes hacer una Pull Request en
 el repositorio de [GitHub](https://github.com/Seyronh/toxicity) modificando el archivo JSON dentro de la carpeta **entrenamiento**.
 
-En el array de `input` encontrarás varias palabras, algunas tóxicas y otras completamente normales.
-Puedes añadir tantas palabras como quieras, no importa que sean tóxicas o normales, pero recuerda que **por cada palabra que añadas**, en el array de `output` deberás añadir un 0 si ésta es normal o un 1 si esta es tóxica.
+En el array de `input` encontrarás varias palabras/frases, algunas tóxicas y otras completamente normales.
+Puedes añadir tantas palabras/frases como quieras, no importa que sean tóxicas o normales, pero recuerda que **por cada palabra que añadas**, en el array de `output` deberás añadir un 0 si ésta es normal o un 1 si esta es tóxica.
+
+Ademas si quieres ayudar en otro idioma solo debes hacer un pull request en la carpeta entrenamiento añadiendo un archivo llamado idioma.json y poniendo la misma estructura que el idioma español.
 
 ¡No podemos esperar a recibir tu contribución!
