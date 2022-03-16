@@ -34,7 +34,7 @@ class Modelo {
         modelo.add(capas.dense({units:50}))
         modelo.add(capas.dense({units:30}))
         modelo.add(capas.dense({units:10}))
-        modelo.add(capas.dense({units:1}))
+        modelo.add(capas.dense({units:1,activation:'sigmoid'}))
         modelo.compile({optimizer: 'sgd', loss: 'meanSquaredError'});
         return modelo
     }
